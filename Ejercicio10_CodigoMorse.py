@@ -18,8 +18,10 @@ def PasarMorseYNatural (cadena):
     return cadena_final
 
 
+#Falta implementar la parte en la que la función lo hace a la inversa(de morse a natural)
+
 #Prueba
-texto = ". - - . . . . - - - . . ."
+texto = "Adios"
 morse = PasarMorseYNatural(texto)
 
 print(str(morse))
