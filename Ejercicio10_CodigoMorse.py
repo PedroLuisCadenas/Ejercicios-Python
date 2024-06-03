@@ -11,17 +11,22 @@ def PasarMorseYNatural (cadena):
     ,"U" : ". . -" ,"V" : ". . . -","W" : ". - -","X" : "- . . -","Y" : "- . - -" 
     , "Z" : "- - . ."}  #Esto es un diccionario, donde podemos acceder al valor a través de la clave
     
+    diccionario_morse = {v : k for k, v in diccionario.items()} #Sintaxis para invertir las claves y los valores de un diccionario
+    
     for i in cadena_array:
-        if i in cadena_array:
-            cadena_final.append(diccionario[i]) #La función .append() lo que hace es añadir el valor dentro de la lista
-
+        if i != "." or i != "-":
+            if i in cadena_array:
+                cadena_final.append(diccionario[i]) #La función .append() lo que hace es añadir el valor dentro de la lista
+        #else:
+         #   if i in cadena_array:
+          #      cadena_final.append(diccionario_morse[i])
     return cadena_final
 
 
 #Falta implementar la parte en la que la función lo hace a la inversa(de morse a natural)
 
 #Prueba
-texto = "Adios"
+texto = ". -"
 morse = PasarMorseYNatural(texto)
 
 print(str(morse))
